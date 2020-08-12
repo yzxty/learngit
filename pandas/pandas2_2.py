@@ -1,9 +1,9 @@
 import pandas as pd
 
 #导入数据
-ratings = pd.read_csv('D:/python/venv/onlinelearning/MovieLens/ml-latest-small/ratings.csv')
-movies = pd.read_csv('D:/python/venv/onlinelearning/MovieLens/ml-latest-small/movies.csv')
-tags = pd.read_csv('D:/python/venv/onlinelearning/MovieLens/ml-latest-small/tags.csv')
+ratings = pd.read_csv('ratings.csv')
+movies = pd.read_csv('movies.csv')
+tags = pd.read_csv('tags.csv')
 
 #计算平均分
 avg_ratings=ratings.groupby(['movieId'],as_index=False)['rating'].agg({'avg_rating':'mean'})#ID,平均分
