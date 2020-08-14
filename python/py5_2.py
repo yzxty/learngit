@@ -1,5 +1,17 @@
+def fib(n):
+    if n < 1 :
+        return []
+    if n == 1:
+        return [1]
+    if n == 2:
+        return [1, 1]
+    fibs = [1, 1]
+    for i in range(2, n):
+        fibs.append(fibs[i - 1] + fibs[i - 2])
+    return fibs
+
+
 import unittest
-from fib import fib
 
 
 class FibTest(unittest.TestCase):
@@ -10,10 +22,10 @@ class FibTest(unittest.TestCase):
         self.assertEqual(fib(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 
     def test_generate_negative_number_fibs(self):
-        self.assertEqual(fib(-2), None)
+        self.assertEqual(fib(-2), [])
 
     def test_generate_0_number_fibs(self):
-        self.assertEqual(fib(0), None)
+        self.assertEqual(fib(0), [])
 
     def test_generate_1_number_fibs(self):
         self.assertEqual(fib(1), [1])
