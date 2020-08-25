@@ -13,11 +13,11 @@ x=df.loc[:,['RM','DIS','LSTAT','PTRATIO']]
 
 plt.scatter(x['RM'],target_df,c = 'r',marker = 'o')
 plt.show()
-plt.scatter(x['DIS'],y_df,c = 'g',marker = 'o')
+plt.scatter(x['DIS'],target_df,c = 'g',marker = 'o')
 plt.show()
-plt.scatter(x['LSTAT'],y_df,c = 'b',marker = 'o')
+plt.scatter(x['LSTAT'],target_df,c = 'b',marker = 'o')
 plt.show()
-plt.scatter(x['PTRATIO'],y_df,c = 'y',marker = 'o')
+plt.scatter(x['PTRATIO'],target_df,c = 'y',marker = 'o')
 plt.show()
 
 xx = np.array(x)
